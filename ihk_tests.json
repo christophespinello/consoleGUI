@@ -1,0 +1,389 @@
+[
+    {
+        "command": "LED_matrix_speed",
+        "description": "Execute LED matrix speed (500us to 5ms)",
+        "action": [
+            "set_led_matrix_all 1",
+            ":LOOP",
+            "set_led_matrix_speed 500",
+            "SLEEP 1",
+            "set_led_matrix_speed 1000",
+            "SLEEP 1",
+            "set_led_matrix_speed 2000",
+            "SLEEP 1",
+            "set_led_matrix_speed 3000",
+            "SLEEP 1",
+            "set_led_matrix_speed 4000",
+            "SLEEP 1",
+            "set_led_matrix_speed 4000",
+            "SLEEP 1",
+            "set_led_matrix_speed 5000",
+            "SLEEP 1",
+            "GOTO LOOP",
+            "set_led_matrix_all 0"
+        ]
+    },
+    {
+        "command": "LED_all_off",
+        "description": "Execute LED all off",
+        "action": [
+            "set_led_matrix_all 0",
+            "set_led_power r 0",
+            "set_led_power g 0",
+            "set_led_power w 0",
+            "set_led_mode frost 0",
+            "set_led_mode eco 0",
+            "set_led_mode comf 0",
+            "set_led_mode boost 0",
+            "set_led_mode connect 0"
+        ]
+    },
+    {
+        "command": "LED_pwm_test",
+        "description": "Execute LED matrix ON PWM time (0% to 100%)",
+        "action": [
+            "set_led_matrix_duty_cycle 0",
+            "set_led_matrix_all 1",
+            "SLEEP 1",
+            "set_led_matrix_duty_cycle 10",
+            "SLEEP 1",
+            "set_led_matrix_duty_cycle 20",
+            "SLEEP 1",
+            "set_led_matrix_duty_cycle 30",
+            "SLEEP 1",
+            "set_led_matrix_duty_cycle 40",
+            "SLEEP 1",
+            "set_led_matrix_duty_cycle 50",
+            "SLEEP 1",
+            "set_led_matrix_duty_cycle 60",
+            "SLEEP 1",
+            "set_led_matrix_duty_cycle 70",
+            "SLEEP 1",
+            "set_led_matrix_duty_cycle 80",
+            "SLEEP 1",
+            "set_led_matrix_duty_cycle 90",
+            "SLEEP 1",
+            "set_led_matrix_duty_cycle 100",
+            "SLEEP 1",
+            "set_led_matrix_all 0"
+        ]
+    },
+    {
+        "command": "LED_test_unitaire",
+        "description": "Execute LED one per one (Verification sequence)",
+        "action": [
+			"CALL LED_all_off",
+            "SLEEP 1",
+            "set_led_power r 1",
+            "set_led_mode frost 1",
+            "SLEEP 0.1",
+            "set_led_mode frost 0",
+            "set_led_mode eco 1",
+            "SLEEP 0.1",
+            "set_led_mode eco 0",
+            "set_led_mode comf 1",
+            "SLEEP 0.1",
+            "set_led_mode comf 0",
+            "set_led_mode boost 1",
+            "SLEEP 0.1",
+            "set_led_mode boost 0",
+            "set_led_mode connect 1",
+            "SLEEP 0.1",
+            "set_led_mode connect 0",
+            "set_led_power r 0",
+            "set_led_power g 1",
+            "SLEEP 0.1",
+            "set_led_matrix_all 1",
+            "SLEEP 1",
+            "set_led_matrix_all 0",
+            "SLEEP 0.1",
+            "set_led_matrix 1 1 1",
+            "SLEEP 0.1",
+            "set_led_matrix 1 1 0",
+            "set_led_matrix 2 2 1",
+            "SLEEP 0.1",
+            "set_led_matrix 2 2 0",
+            "set_led_matrix 1 2 1",
+            "SLEEP 0.1",
+            "set_led_matrix 1 2 0",
+            "set_led_matrix 4 1 1",
+            "SLEEP 0.1",
+            "set_led_matrix 4 1 0",
+            "set_led_matrix 3 1 1",
+            "SLEEP 0.1",
+            "set_led_matrix 3 1 0",
+            "set_led_matrix 2 1 1",
+            "SLEEP 0.1",
+            "set_led_matrix 2 1 0",
+            "set_led_matrix 3 2 1",
+            "SLEEP 0.1",
+            "set_led_matrix 3 2 0",
+            "set_led_matrix 4 2 1",
+            "SLEEP 0.1",
+            "set_led_matrix 4 2 0",
+            "set_led_matrix 1 3 1",
+            "SLEEP 0.1",
+            "set_led_matrix 1 3 0",
+            "set_led_matrix 2 4 1",
+            "SLEEP 0.1",
+            "set_led_matrix 2 4 0",
+            "set_led_matrix 1 4 1",
+            "SLEEP 0.1",
+            "set_led_matrix 1 4 0",
+            "set_led_matrix 4 3 1",
+            "SLEEP 0.1",
+            "set_led_matrix 4 3 0",
+            "set_led_matrix 3 3 1",
+            "SLEEP 0.1",
+            "set_led_matrix 3 3 0",
+            "set_led_matrix 2 3 1",
+            "SLEEP 0.1",
+            "set_led_matrix 2 3 0",
+            "set_led_matrix 3 4 1",
+            "SLEEP 0.1",
+            "set_led_matrix 3 4 0",
+            "set_led_matrix 4 4 1",
+            "SLEEP 0.1",
+            "set_led_matrix 4 4 0",
+            "set_led_matrix 1 5 1",
+            "SLEEP 0.1",
+            "set_led_matrix 1 5 0",
+            "set_led_matrix 2 6 1",
+            "SLEEP 0.1",
+            "set_led_matrix 2 6 0",
+            "set_led_matrix 2 7 1",
+            "SLEEP 0.1",
+            "set_led_matrix 2 7 0",
+            "set_led_matrix 1 6 1",
+            "SLEEP 0.1",
+            "set_led_matrix 1 6 0",
+            "set_led_matrix 4 5 1",
+            "SLEEP 0.1",
+            "set_led_matrix 4 5 0",
+            "set_led_matrix 3 5 1",
+            "SLEEP 0.1",
+            "set_led_matrix 3 5 0",
+            "set_led_matrix 1 7 1",
+            "SLEEP 0.1",
+            "set_led_matrix 1 7 0",
+            "set_led_matrix 2 5 1",
+            "SLEEP 0.1",
+            "set_led_matrix 2 5 0",
+            "set_led_matrix 3 6 1",
+            "SLEEP 0.1",
+            "set_led_matrix 3 6 0",
+            "set_led_matrix 3 7 1",
+            "SLEEP 0.1",
+            "set_led_matrix 3 7 0",
+            "set_led_matrix 4 6 1",
+            "SLEEP 0.5",
+            "set_led_matrix 4 6 0",
+            "set_led_power g 0",
+            "set_led_power w 1",
+            "SLEEP 0.1",
+            "set_led_matrix 1 1 1",
+            "set_led_matrix 2 2 1",
+            "set_led_matrix 1 2 1",
+            "set_led_matrix 4 1 1",
+            "set_led_matrix 3 1 1",
+            "set_led_matrix 2 1 1",
+            "set_led_matrix 3 2 1",
+            "set_led_matrix 1 3 1",
+            "set_led_matrix 2 4 1",
+            "set_led_matrix 1 4 1",
+            "set_led_matrix 4 3 1",
+            "set_led_matrix 3 3 1",
+            "set_led_matrix 2 3 1",
+            "set_led_matrix 3 4 1",
+            "set_led_matrix 1 5 1",
+            "set_led_matrix 2 6 1",
+            "set_led_matrix 2 7 1",
+            "set_led_matrix 1 6 1",
+            "set_led_matrix 4 5 1",
+            "set_led_matrix 3 5 1",
+            "set_led_matrix 1 7 1",
+            "set_led_matrix 2 5 1",
+            "set_led_matrix 3 6 1",
+            "SLEEP 1",
+			"CALL LED_all_off"
+        ]
+    },
+    {
+        "command": "LED_application",
+        "description": "Execute LED classic pattern (12°C & RED LED On)",
+        "action": [
+			"CALL LED_all_off",
+            "set_led_power r 1",
+            "set_led_matrix 2 1 1",
+            "set_led_matrix 3 1 1",
+            "set_led_matrix 1 3 1",
+            "set_led_matrix 2 3 1",
+            "set_led_matrix 3 4 1",
+            "set_led_matrix 1 4 1",
+            "set_led_matrix 4 3 1",
+            "set_led_matrix 1 5 1",
+            "set_led_matrix 2 5 1",
+            "set_led_matrix 3 7 1",
+            "set_led_matrix 2 6 1"
+        ]
+    },
+    {
+        "command": "LED_on_off_sequence",
+        "description": "Execute LED ON-OFF change sequence",
+        "action": [
+			"CALL LED_all_off",
+			":LOOP",
+            "set_led_power r 1",
+            "SLEEP 1",
+            "set_led_power r 0",
+            "set_led_power g 1",
+            "SLEEP 1",
+            "set_led_power g 0",
+            "set_led_power w 1",
+            "SLEEP 1",
+            "set_led_power w 0",
+            "GOTO LOOP"
+        ]
+    },
+    {
+        "command": "BUZZER_beep",
+        "description": "Execute Bip buzzer 3 times during 0.5s",
+        "action": [
+            "set_buzzer_freq 4000",
+            "set_buzzer 1",
+            "SLEEP 0.5",
+            "set_buzzer 0",
+            "SLEEP 0.5",
+            "set_buzzer 1",
+            "SLEEP 0.5",
+            "set_buzzer 0",
+            "SLEEP 0.5",
+            "set_buzzer 1",
+            "SLEEP 0.5",
+            "set_buzzer 0"
+         ]
+    },
+    {
+        "command": "TRIAC_toggle",
+        "description": "Execute TRIAC command 3 times during 0.5s",
+        "action": [
+            "set_triac 1",
+            "SLEEP 0.5",
+            "set_triac 0",
+            "SLEEP 0.5",
+            "set_triac 1",
+            "SLEEP 0.5",
+            "set_triac 0",
+            "SLEEP 0.5",
+            "set_triac 1",
+            "SLEEP 0.5",
+            "set_triac 0",
+            "SLEEP 0.5"
+         ]
+    },
+    {
+        "command": "Fil_pilote_test",
+        "description": "Execute FIL PILOT test",
+        "action": [
+            "test_pilot_pos",
+            "test_pilot_neg"
+         ]
+    },
+    {
+        "command": "BLE_send_frame_channel0",
+        "description": "Send BLE Messages channel 0 during 1s",
+        "action": [
+            "test_ble_tx 0 10 0 1"
+         ]
+    },
+    {
+        "command": "RF868MHz_CW_5s",
+        "description": "Send CW RF 868MHz during 5s",
+        "action": [
+            "test_rf_868_cw 5"
+         ]
+    },
+    {
+        "command": "Encoder_RESET",
+        "description": "RESET encoder stats",
+        "action": [
+            "encoder_reset"
+         ]
+    },
+    {
+        "command": "Encoder_TEST_SWITCH",
+        "description": "Test encoder switch stats",
+        "action": [
+            "test_encoder_switch"
+         ]
+    },
+    {
+        "command": "Encoder_TEST_CW",
+        "description": "Test encoder clockwise stats",
+        "action": [
+            "test_encoder_cw"
+         ]
+    },
+    {
+        "command": "Encoder_TEST_CCW",
+        "description": "Test encoder anti-clockwise stats",
+        "action": [
+            "test_encoder_ccw"
+         ]
+    },
+    {
+        "command": "NTC_ambiant_acquisition",
+        "description": "Execute Ambiant Temperature Acquisition",
+        "action": [
+            "set_ntc_power 1",
+            "SLEEP 0.5",
+            "get_ntc_ambiant",
+            "SLEEP 0.5",
+            "set_ntc_power 0"
+         ]
+    },
+    {
+        "command": "NTC_heater_acquisition",
+        "description": "Execute Heater Temperature Acquisition",
+        "action": [
+            "set_ntc_power 1",
+            "SLEEP 0.5",
+            "get_ntc_heater",
+            "SLEEP 0.5",
+            "set_ntc_power 0"
+         ]
+    },
+    {
+        "command": "NTC_ambiant_acquisition logfile",
+        "description": "Execute Ambiant Temperature Acquisition and save into logfile",
+        "action": [
+            "LOGFILE START",
+			":LOOP",
+            "set_ntc_power 1",
+            "SLEEP 0.5",
+			"LOGFILE RECORD",
+            "get_ntc_ambiant",
+            "SLEEP 0.5",
+            "set_ntc_power 0",
+			"GOTO LOOP"
+         ]
+    },
+    {
+        "command": "NTC_ambiant_heater_acquisition logfile",
+        "description": "Execute Ambiant Temperature & Heater Acquisition and save into logfile",
+        "action": [
+            "LOGFILE START",
+			":LOOP",
+            "set_ntc_power 1",
+            "SLEEP 0.5",
+			"LOGFILE RECORD",
+            "get_ntc_ambiant",
+			"LOGFILE RECORD",
+            "get_ntc_heater",
+            "SLEEP 0.5",
+            "set_ntc_power 0",
+			"LOGFILE WRITE",
+			"GOTO LOOP"
+         ]
+    }    
+]

@@ -1,0 +1,336 @@
+[
+    {
+        "command": "Read_State",
+        "description": "Read All states of the product",
+        "action": [
+            "AT+READ FW_VERSION",
+            "AT+READ MODE",
+            "AT+READ VOLTAGE",
+            "AT+READ NTC",
+            "AT+READ RTC",
+            "AT+READ TX_POWER",
+            "AT+READ TX_CHANNEL",
+            "AT+READ RX_CHANNEL",
+            "AT+READ TX_MODULATION",
+            "AT+READ RX_MODULATION",
+            "AT+READ CONFIG_TX_POWER_PMAX",
+            "AT+READ CONFIG_TX_POWER_PMAX_6DB",
+            "AT+READ CONFIG_TX_POWER_PMAX_12DB",
+			"AT+READ CONFIG_RX",
+            "AT+READ CONFIG_IDLE",
+            "AT+READ RADIO_NUMBER",
+            "AT+READ RADIO_MANUFACTURER"
+        ]
+    },
+    {
+        "command": "Write KMOB",
+        "description": "Write KMOB key",
+        "action": [
+            "AT+WRITE_KMOB key=5B235E1B4148A5750F9D6934978CFC0AB91D9B3EE836DE4471EE50533DC4DD9F,d7055422"
+        ]
+    },
+    {
+        "command": "Check KMOB",
+        "description": "Check KMOB key",
+        "action": [
+			"AT+CHECK_KMOB"
+        ]
+    },
+    {
+        "command": "Write KMAC",
+        "description": "Write KMAC key",
+        "action": [
+            "AT+WRITE_KMAC key=24783B3660FF76DA980033B8DD0A8033567F4B685796471C940F034D3A099EFB,a1e0743f",
+			"AT+CHECK_KMAC"
+        ]
+    },
+    {
+        "command": "Configuration_PA",
+        "description": "Configure all configurations of PA pins",
+        "action": [
+            "AT+WRITE CONFIG_TX_POWER_PMAX=7,1,1,1",
+            "AT+WRITE CONFIG_TX_POWER_PMAX_6DB=4,1,1,1",
+            "AT+WRITE CONFIG_TX_POWER_PMAX_12DB=2,1,1,1",
+            "AT+WRITE CONFIG_RX=0,0,0,1",
+            "AT+WRITE CONFIG_IDLE=0,0,0,0",
+            "AT+WRITE TX_POWER=0"
+        ]
+    },
+    {
+        "command": "Configuration_Radio_Number",
+        "description": "Configure Radio Number & Manufacturer Number",
+        "action": [
+            "AT+WRITE RADIO_NUMBER=050000000004",
+            "AT+WRITE RADIO_MANUFACTURER=0001"
+        ]
+    },
+    {
+        "command": "Configuration_Tx_Power_Max",
+        "description": "Configure the maximum Tx Power",
+        "action": [
+            "AT+WRITE TX_POWER=0"
+        ]
+    },
+    {
+        "command": "Configuration_Tx_Power_6DB",
+        "description": "Configure the maximum Tx Power -6DB",
+        "action": [
+            "AT+WRITE TX_POWER=1"
+        ]
+    },
+    {
+        "command": "Configuration_Tx_Power_12DB",
+        "description": "Configure the maximum Tx Power -12DB",
+        "action": [
+            "AT+WRITE TX_POWER=2"
+        ]
+    },
+    {
+        "command": "Configuration_Tx_Power_Max without PA",
+        "description": "Configure the maximum Tx Power without PA",
+        "action": [
+            "AT+WRITE CONFIG_TX_POWER_PMAX=248,1,0,1",
+            "AT+WRITE TX_POWER=0"
+        ]
+    },
+    {
+        "command": "Configuration_Channel_100",
+        "description": "Configure the channel 100",
+        "action": [
+            "AT+WRITE TX_CHANNEL=100",
+            "AT+WRITE RX_CHANNEL=100"
+        ]
+    },
+    {
+        "command": "Configuration_Channel_110",
+        "description": "Configure the channel 110",
+        "action": [
+            "AT+WRITE TX_CHANNEL=110",
+            "AT+WRITE RX_CHANNEL=110"
+        ]
+    },
+    {
+        "command": "Configuration_Channel_120",
+        "description": "Configure the channel 120",
+        "action": [
+            "AT+WRITE TX_CHANNEL=120",
+            "AT+WRITE RX_CHANNEL=120"
+        ]
+    },
+    {
+        "command": "Configuration_Channel_130",
+        "description": "Configure the channel 130",
+        "action": [
+            "AT+WRITE TX_CHANNEL=130",
+            "AT+WRITE RX_CHANNEL=130"
+        ]
+    },
+    {
+        "command": "Configuration_Channel_140",
+        "description": "Configure the channel 140",
+        "action": [
+            "AT+WRITE TX_CHANNEL=140",
+            "AT+WRITE RX_CHANNEL=140"
+        ]
+    },
+    {
+        "command": "Configuration_Channel_150",
+        "description": "Configure the channel 150",
+        "action": [
+            "AT+WRITE TX_CHANNEL=150",
+            "AT+WRITE RX_CHANNEL=150"
+        ]
+    },
+    {
+        "command": "Set_Modulation_WM2400",
+        "description": "Configure the modulation WM2400",
+        "action": [
+            "AT+WRITE TX_MODULATION=0",
+            "AT+WRITE RX_MODULATION=0"
+        ]
+    },
+    {
+        "command": "Set_Modulation_WM4800",
+        "description": "Configure the modulation WM4800",
+        "action": [
+            "AT+WRITE TX_MODULATION=1",
+            "AT+WRITE RX_MODULATION=1"
+        ]
+    },
+    {
+        "command": "Set_Modulation_HSPEED",
+        "description": "Configure the modulation HSPEED",
+        "action": [
+            "AT+WRITE TX_MODULATION=2",
+            "AT+WRITE RX_MODULATION=2"
+        ]
+    },
+    {
+        "command": "Set_Modulation_LAN1G",
+        "description": "Configure the modulation LAN1G",
+        "action": [
+            "AT+WRITE TX_MODULATION=3"
+        ]
+    },
+    {
+        "command": "Set_Modulation_LD1200",
+        "description": "Configure the modulation LD1200",
+        "action": [
+            "AT+WRITE TX_MODULATION=4"
+        ]
+    },
+    {
+        "command": "Set_Modulation_LD2400",
+        "description": "Configure the modulation LD2400",
+        "action": [
+            "AT+WRITE TX_MODULATION=5"
+        ]
+    },
+    {
+        "command": "Start_TX_CW_10s",
+        "description": "Start TX CW during 10s",
+        "action": [
+            "AT+START_CW_TX timeout=10"
+        ]
+    },
+    {
+        "command": "Start_TX_MODULATED_10s",
+        "description": "Start TX Modulated during 10s",
+        "action": [
+            "AT+START_MODULATED_TX timeout=10"
+        ]
+    },
+    {
+        "command": "Start_TX_MODULATED_ON_OFF_10s",
+        "description": "Start TX Modulated ON/OFF during 10s",
+        "action": [
+            "AT+START_MODULATED_TX_ON_OFF timeout=10"
+        ]
+    },
+    {
+        "command": "Send_Message (MAXLength)",
+        "description": "Send RF message with max length",
+        "action": [
+            "AT+START_TX FRAME=48440100000000050001010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525357555657585960617238"
+        ]
+    },	
+    {
+        "command": "Send_Message (RADIOCRAFT)",
+        "description": "Send RF message",
+        "action": [
+            "AT+START_TX FRAME=154424487856341201070102030405060708090a8e51"
+        ]
+	},
+    {
+        "command": "Send_Message_Periodic (RADIOCRAFT)",
+        "description": "Send RF message every 5 minutes",
+        "action": [
+            "AT+START_TX_PERIODIC FRAME=154424487856341201070102030405060708090a8e51"
+        ]
+	},
+    {
+        "command": "Start TX Burst",
+        "description": "Start TX Burst",
+        "action": [
+			"AT+START_TX_BURST"
+        ]
+    },	
+    {
+        "command": "CW_All_channels",
+        "description": "Send CW on all channels (5s)",
+        "action": [
+            "AT+WRITE TX_CHANNEL=100",
+            "AT+START_CW_TX timeout=5",
+			"SLEEP 6",
+            "AT+WRITE TX_CHANNEL=110",
+            "AT+START_CW_TX timeout=5",
+			"SLEEP 6",
+            "AT+WRITE TX_CHANNEL=120",
+            "AT+START_CW_TX timeout=5",
+			"SLEEP 6",
+            "AT+WRITE TX_CHANNEL=130",
+            "AT+START_CW_TX timeout=5",
+			"SLEEP 6",
+            "AT+WRITE TX_CHANNEL=140",
+            "AT+START_CW_TX timeout=5",
+			"SLEEP 6",
+            "AT+WRITE TX_CHANNEL=150",
+            "AT+START_CW_TX timeout=5"
+        ]
+    },	
+    {
+        "command": "Start RX",
+        "description": "Start RX",
+        "action": [
+			"AT+WRITE CONFIG_RX=0,0,0,1",
+            "AT+START_RX"
+        ]
+    },	
+    {
+        "command": "Read RX Frame",
+        "description": "Read last RX frame",
+        "action": [
+            "AT+FRAME_RX"
+        ]
+    },	
+    {
+        "command": "Read RX Frame",
+        "description": "Read last RX frame with 2s loop",
+        "action": [
+			"LOOP:",
+            "AT+FRAME_RX",
+			"SLEEP 2",
+			"GOTO LOOP"
+        ]
+    },	
+    {
+        "command": "Stop RX/TX",
+        "description": "Stop RX/TX mode",
+        "action": [
+            "AT+STOP_TX",
+            "AT+STOP_RX"
+        ]
+    },
+    {
+        "command": "FLASH_Get_Info",
+        "description": "Get Flash information",
+        "action": [
+            "AT+GET_FLASH_INFO"
+        ]
+    },
+    {
+        "command": "EEPROM_Set_Manuf_Area",
+        "description": "Set Eeprom Manufacturer area information",
+        "action": [
+            "AT+WRITE_MANUF_AREA DATA=0,10,01020304050607080900"
+        ]
+    },
+    {
+        "command": "EEPROM_Get_Manuf_Area",
+        "description": "Get Eeprom Manufacturer area information",
+        "action": [
+            "AT+READ_MANUF_AREA DATA=0,10"
+        ]
+    },
+	{
+        "command": "LOW_POWER_MODE",
+        "description": "Deep low power mode during 15s",
+        "action": [
+            "AT+LOW_POWER_MODE"
+        ]
+    },	
+	{
+        "command": "LOW_POWER_NOMINAL",
+        "description": "Nominal low power mode during 15s",
+        "action": [
+            "AT+LOW_POWER_MODE_NOMINAL=15"
+        ]
+    },	
+    {
+        "command": "RESET",
+        "description": "RESET the product",
+        "action": [
+            "AT+RESET"
+        ]
+    }
+]

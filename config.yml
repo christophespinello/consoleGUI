@@ -1,0 +1,5 @@
+baudrate: 115200
+comport: COM10
+debug: true
+json_filename : ./ihk_tests_v2.json
+frame_type : ZEHNDER
